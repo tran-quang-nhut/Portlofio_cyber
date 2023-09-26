@@ -1,0 +1,317 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* header  */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+header nav .nav-link.active {
+    color: green !important;
+}
+
+header nav .nav-item {
+    position: relative;
+}
+
+header nav .nav-item::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    background-color: green;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+
+header nav .nav-item:first-child::before {
+    width: 100%;
+}
+
+header nav .nav-item:hover::before {
+    width: 100%;
+}
+
+header nav .nav-item .nav-link {
+    transition: all 0.5s;
+}
+
+header nav .nav-item:hover .nav-link {
+    color: green !important;
+}
+
+/* SECTION CYBER CAROUSEL  */
+.cyber_carousel .carousel-inner {
+    height: 100vh;
+}
+
+.cyber_carousel .carousel-item {
+    height: 100%;
+}
+
+.cyber_carousel .carousel-inner img {
+    height: 100%;
+}
+
+.cyber_carousel .carousel-inner img {
+    filter: brightness(0.8) grayscale(30%);
+}
+
+.cyber_carousel .carousel-item {
+    position: relative;
+}
+
+/* .cyber_carousel .carousel-item .carousel_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+} */
+
+.cyber_carousel .carousel-item .carousel_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(39,43,54,.5);
+}
+
+.cyber_carousel .carousel-item .carousel_content img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.cyber_carousel .carousel-item .carousel_content h2 {
+    font-size: 70px;
+}
+
+
+/* PROJECT */
+.cyber_project .project_content ul {
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.cyber_project .project_content .nav-item button {
+    border-radius: 5px;
+}
+
+.cyber_project .project_content .nav-item button.active {
+    background-color: #35A22C;
+    color: white;
+    border: none;
+}
+
+.cyber_project .project_content .nav-item button {
+    border: 1px solid black;
+    color: black;
+    
+    
+}
+
+.cyber_project .project_content .project_item img {
+    width: 100%;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+}
+
+.cyber_project .project_content .project_item {
+    border-radius: 16px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cyber_project .project_content .project_item .project_text {
+    text-align: center;
+    padding: 20px 30px 40px 30px;
+    border: 1px solid transparent;
+    border-top: none;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    transition: all 0.5s;
+    
+}
+
+.cyber_project .project_content .project_item:hover .project_text {
+    border: 1px solid  #35A22C;
+    border-top: none;
+    transition: all 0.5s;
+}
+.cyber_project .project_content .project_item .project_text h3 {
+    transition: all 0.5s;
+    font-size: 20px;
+}
+
+.cyber_project .project_content .project_item:hover .project_text h3 {
+    color: #35A22C;
+}
+
+/* AVAILABLE  */
+.available {
+    background-image: url(./../img/3.jpg);
+    background-attachment: fixed;
+    position: relative;
+    background-size: cover;
+    
+}
+
+.available .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(7,10,12,.72)
+}
+
+.available .available_content .avai_item {
+    background-color: rgba(255,255,255,.1);
+    border: 1px solid transparent;
+}
+
+.available .available_content .avai_item:hover {
+    background-color: black;
+    border: 1px solid white;
+}
+
+@media screen and (max-width:576px) {
+    .cyber_carousel .carousel-item .carousel_content h2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .cyber_carousel .carousel-item .carousel_content h2 {
+        font-size: 50px;
+    }
+}
+
+/* Award */
+
+.award {
+    position: relative;
+    color: #585858;
+    padding: 70px 0;
+}
+
+.award_bg {
+    background-image: url(./../img/memphis_3.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.award .container {
+    /* margin: 1140px; */
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.award .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.award .container .award_left {
+    background-color: rgba(255,255,255,.25);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,.18);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.3);
+    padding: 85px;
+}
+
+.award .container .award_left h2 {
+    font-size: 36px;
+    line-height: 42px;
+    color: #1a1d2d;
+    font-weight: 600;
+}
+
+.award .container .award_left p {
+    color: #585858;
+    line-height: 24px;
+}
+
+.award .container .award_right {
+    padding: 45px 0;
+}
+
+/* FOOTER  */
+footer {
+    background-color: #222;
+}
+
+footer .footer_main a {
+    margin-right: 10px;
+    color: #aaa;
+    text-decoration: none;
+    
+}
+
+
+footer .footer_main i {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 50%;
+    border: 1px solid #454545;
+    transition: all 0.5s;
+}
+
+footer .footer_main i:hover {
+    border-color: #35a22c;
+}
+
+footer .footer_copies {
+    border-top: 1px solid #454545;
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+footer .footer_copies p {
+    color: #aaa;
+}
+
+footer .footer_copies a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+footer .footer_copies a:hover {
+    color: #35A22C;
+}
+    
+    
+
+
+
